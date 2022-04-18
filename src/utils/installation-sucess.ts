@@ -44,7 +44,7 @@ export function includesFailure(input: string = '') {
   let isPythonFailure = false;
 
   isBuildToolsFailure = input.includes('Closing installer. Return code:') ||
-    input.includes('Shutting down, exit code:');
+    input.includes('Shutting down, exit code:') || input.includes('Closing the installer with exit code 1');
 
   isPythonFailure = input.includes(' -- Installation failed.');
 
